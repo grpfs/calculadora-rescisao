@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculadora de Rescisão Trabalhista 2026 — Calcule Online e Grátis</title>
+<meta name="description" content="Calcule sua rescisão trabalhista em segundos: saldo de salário, aviso prévio, 13º e férias proporcionais, multa de 40% do FGTS. Simulador gratuito e atualizado.">
+<link rel="canonical" href="https://seusite.com.br/calculadora-de-rescisao">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Calculadora de Rescisão Trabalhista — Grátis e Online">
+<meta property="og:description" content="Descubra quanto você tem direito a receber na rescisão do contrato de trabalho. Cálculo instantâneo, sem cadastro.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://seusite.com.br/calculadora-de-rescisao">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+
+<!-- JSON-LD: SoftwareApplication -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Calculadora de Rescisão Trabalhista",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "Web",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "BRL" },
+  "description": "Calculadora gratuita para estimar valores de rescisão trabalhista no Brasil: saldo de salário, aviso prévio, 13º e férias proporcionais e multa do FGTS."
+}
+</script>
+
+<!-- JSON-LD: FAQPage -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Quanto tempo a empresa tem para pagar a rescisão?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A CLT determina prazo de até 10 dias corridos a partir do término do contrato para o pagamento das verbas rescisórias, independentemente do tipo de rescisão." }
+    },
+    {
+      "@type": "Question",
+      "name": "Quem pede demissão tem direito a algum valor de rescisão?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Sim. Quem pede demissão recebe saldo de salário, férias vencidas e proporcionais com 1/3, e 13º salário proporcional. Não recebe aviso prévio indenizado nem a multa de 40% do FGTS, e normalmente não pode sacar o FGTS depositado." }
+    },
+    {
+      "@type": "Question",
+      "name": "Como funciona a multa de 40% do FGTS?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Na demissão sem justa causa, o empregador deve pagar uma multa equivalente a 40% sobre todo o saldo já depositado do FGTS durante o contrato. Na rescisão por acordo, essa multa cai para 20%." }
+    },
+    {
+      "@type": "Question",
+      "name": "O que é rescisão por acordo (comum acordo)?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Prevista no artigo 484-A da CLT, é quando empregado e empregador concordam em encerrar o contrato. O trabalhador recebe metade do aviso prévio indenizado, multa de 20% do FGTS e pode sacar até 80% do saldo do FGTS, mas não tem direito ao seguro-desemprego." }
+    },
+    {
+      "@type": "Question",
+      "name": "Tenho direito a seguro-desemprego depois da rescisão?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Em geral, sim, na demissão sem justa causa, desde que cumpridos os requisitos de tempo de trabalho exigidos pelo Ministério do Trabalho. Em pedido de demissão, justa causa e rescisão por acordo não há direito ao benefício." }
+    },
+    {
+      "@type": "Question",
+      "name": "Por que o resultado não mostra os descontos de INSS e IRRF?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Esta calculadora mostra valores brutos das verbas rescisórias para dar uma estimativa rápida. Os descontos de INSS e Imposto de Renda variam conforme a faixa salarial e devem ser conferidos no recibo oficial fornecido pela empresa ou por um contador." }
+    },
+    {
+      "@type": "Question",
+      "name": "O resultado desta calculadora tem valor legal?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Não. Trata-se de uma estimativa para fins informativos. Convenções coletivas, adicionais salariais e particularidades do contrato podem alterar os valores reais. Consulte um contador ou advogado trabalhista para o cálculo oficial." }
+    }
+  ]
+}
+</script>
+
+<style>
+  :root{
+    --bg:#ECEAE2;
+    --surface:#FFFFFF;
+    --ink:#1B2430;
+    --muted:#5B6470;
+    --navy:#1D3557;
+    --stamp:#A6332B;
+    --green:#2D6A4F;
+    --line:#D2CCBC;
+    --font-display:'Space Grotesk', sans-serif;
+    --font-body:'Inter', sans-serif;
+    --font-mono:'IBM Plex Mono', monospace;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:var(--font-body);
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{max-width:100%;}
+  a{color:var(--navy);}
+
+  .wrap{max-width:920px;margin:0 auto;padding:0 20px;}
+
+  /* ---------- HEADER ---------- */
+  header.site{
+    background:var(--navy);
+    color:#F2F0E8;
+    padding:14px 0;
+  }
+  header.site .wrap{display:flex;align-items:center;justify-content:space-between;}
+  .brand{
+    font-family:var(--font-display);
+    font-weight:700;
+    font-size:18px;
+    letter-spacing:0.2px;
+    text-decoration:none;
+    color:#F2F0E8;
+  }
+  .brand small{display:block;font-family:var(--font-mono);font-size:11px;color:#B9C4D6;font-weight:400;letter-spacing:0.5px;}
+
+  /* ---------- HERO ---------- */
+  .hero{padding:48px 0 28px;}
+  .eyebrow{
+    font-family:var(--font-mono);
+    font-size:12px;
+    letter-spacing:1px;
+    text-transform:uppercase;
+    color:var(--stamp);
+    margin:0 0 10px;
+  }
+  h1{
+    font-family:var(--font-display);
+    font-size:clamp(28px,5vw,42px);
+    line-height:1.1;
+    margin:0 0 14px;
+    color:var(--ink);
+  }
+  .lead{
+    font-size:17px;
+    color:var(--muted);
+    max-width:560px;
+    margin:0 0 0;
+  }
+
+  /* ---------- CALC CARD ---------- */
+  .calc-card{
+    background:var(--surface);
+    border:1px solid var(--line);
+    border-radius:10px;
+    padding:28px;
+    margin-top:28px;
+    box-shadow:0 1px 0 rgba(0,0,0,0.03);
+  }
+  .field-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:18px;
+  }
+  @media (max-width:600px){
+    .field-grid{grid-template-columns:1fr;}
+  }
+  .field{display:flex;flex-direction:column;gap:6px;}
+  .field.full{grid-column:1 / -1;}
+  label{
+    font-size:13px;
+    font-weight:600;
+    color:var(--ink);
+  }
+  label .hint{display:block;font-weight:400;color:var(--muted);font-size:12px;margin-top:2px;}
+  input[type="number"], input[type="date"], select{
+    font-family:var(--font-mono);
+    font-size:15px;
+    padding:11px 12px;
+    border:1.5px solid var(--line);
+    border-radius:7px;
+    background:#FCFBF8;
+    color:var(--ink);
+    width:100%;
+  }
+  input:focus, select:focus{
+    outline:3px solid #1D335733;
+    border-color:var(--navy);
+  }
+  .checkbox-row{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    font-size:14px;
+    color:var(--ink);
+  }
+  .checkbox-row input{width:18px;height:18px;}
+
+  .btn-calcular{
+    margin-top:22px;
+    width:100%;
+    background:var(--navy);
+    color:#fff;
+    border:none;
+    border-radius:7px;
+    padding:15px 18px;
+    font-family:var(--font-display);
+    font-weight:700;
+    font-size:16px;
+    cursor:pointer;
+    transition:transform 0.05s ease, background 0.15s ease;
+  }
+  .btn-calcular:hover{background:#16294A;}
+  .btn-calcular:active{transform:scale(0.99);}
+
+  /* ---------- RECIBO (resultado) ---------- */
+  .recibo{
+    position:relative;
+    background:var(--surface);
+    border:1px solid var(--line);
+    border-radius:0 0 10px 10px;
+    margin-top:34px;
+    padding:30px 28px 26px;
+    display:none;
+  }
+  .recibo.visible{display:block;}
+  .recibo::before{
+    content:"";
+    position:absolute;
+    top:-10px;left:0;right:0;height:10px;
+    background:
+      linear-gradient(135deg, var(--bg) 50%, transparent 50%) top left,
+      linear-gradient(-135deg, var(--bg) 50%, transparent 50%) top right;
+    background-size:18px 18px;
+    background-repeat:repeat-x;
+    background-color:var(--surface);
+  }
+  .recibo h2{
+    font-family:var(--font-mono);
+    font-size:13px;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    color:var(--muted);
+    margin:0 0 18px;
+    border-bottom:1px dashed var(--line);
+    padding-bottom:12px;
+  }
+  .linha-item{
+    display:flex;
+    justify-content:space-between;
+    align-items:baseline;
+    gap:12px;
+    font-family:var(--font-mono);
+    font-size:14.5px;
+    padding:8px 0;
+    border-bottom:1px dotted var(--line);
+  }
+  .linha-item .label{color:var(--ink);}
+  .linha-item .nota{display:block;font-family:var(--font-body);font-size:12px;color:var(--muted);margin-top:2px;}
+  .linha-item .valor{white-space:nowrap;font-weight:600;color:var(--ink);}
+  .linha-total{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-top:16px;
+    padding-top:16px;
+    border-top:2px solid var(--ink);
+  }
+  .linha-total .label{
+    font-family:var(--font-display);
+    font-weight:700;
+    font-size:16px;
+  }
+  .linha-total .valor{
+    font-family:var(--font-mono);
+    font-weight:700;
+    font-size:26px;
+    color:var(--green);
+  }
+  .stamp{
+    position:absolute;
+    top:18px; right:22px;
+    width:96px;height:96px;
+    border:3px solid var(--stamp);
+    border-radius:50%;
+    color:var(--stamp);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    font-family:var(--font-mono);
+    font-size:11px;
+    font-weight:600;
+    text-transform:uppercase;
+    letter-spacing:0.5px;
+    line-height:1.3;
+    transform:rotate(-10deg) scale(0);
+    opacity:0;
+    transition:transform .35s cubic-bezier(.34,1.56,.64,1), opacity .25s ease;
+  }
+  .stamp.visible{transform:rotate(-10deg) scale(1);opacity:1;}
+  .disclaimer-recibo{
+    margin-top:18px;
+    font-size:12px;
+    color:var(--muted);
+    border-top:1px dashed var(--line);
+    padding-top:12px;
+  }
+  @media (max-width:480px){
+    .stamp{width:74px;height:74px;font-size:9.5px;top:14px;right:14px;}
+    .linha-total .valor{font-size:21px;}
+  }
+
+  /* ---------- AD SLOTS ---------- */
+  .ad-slot{
+    margin:32px 0;
+    min-height:90px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#E4E1D6;
+    border:1px dashed var(--line);
+    border-radius:8px;
+    color:var(--muted);
+    font-family:var(--font-mono);
+    font-size:12px;
+  }
+
+  /* ---------- CONTENT SECTIONS ---------- */
+  .content{padding:20px 0 10px;}
+  .content h2{
+    font-family:var(--font-display);
+    font-size:24px;
+    margin:40px 0 14px;
+  }
+  .content h3{
+    font-family:var(--font-display);
+    font-size:17px;
+    margin:22px 0 8px;
+    color:var(--navy);
+  }
+  .content p{color:var(--ink);font-size:15px;}
+  .content p.muted{color:var(--muted);}
+
+  .tipos-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:14px;
+    margin:18px 0;
+  }
+  @media (max-width:600px){.tipos-grid{grid-template-columns:1fr;}}
+  .tipo-card{
+    background:var(--surface);
+    border:1px solid var(--line);
+    border-radius:8px;
+    padding:16px 18px;
+  }
+  .tipo-card h3{margin-top:0;font-size:15px;}
+  .tipo-card p{font-size:13.5px;color:var(--muted);margin:6px 0 0;}
+
+  /* ---------- FAQ ---------- */
+  .faq-item{
+    border-bottom:1px solid var(--line);
+    padding:14px 0;
+  }
+  .faq-item summary{
+    font-family:var(--font-display);
+    font-weight:600;
+    font-size:15.5px;
+    cursor:pointer;
+    list-style:none;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:12px;
+  }
+  .faq-item summary::-webkit-details-marker{display:none;}
+  .faq-item summary::after{
+    content:"+";
+    font-family:var(--font-mono);
+    font-size:20px;
+    color:var(--navy);
+    flex-shrink:0;
+  }
+  .faq-item[open] summary::after{content:"–";}
+  .faq-item p{margin:10px 0 0;color:var(--muted);font-size:14.5px;}
+
+  footer.site{
+    margin-top:50px;
+    padding:26px 0 40px;
+    color:var(--muted);
+    font-size:12.5px;
+    border-top:1px solid var(--line);
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    .stamp{transition:none;}
+    .btn-calcular{transition:none;}
+  }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="/">FerramentasCLT<small>calculadoras trabalhistas grátis</small></a>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="hero">
+    <p class="eyebrow">Atualizado para 2026</p>
+    <h1>Calculadora de Rescisão Trabalhista</h1>
+    <p class="lead">Descubra quanto você tem direito a receber no encerramento do contrato CLT. Preencha os dados abaixo e veja o cálculo na hora — sem cadastro, sem enviar nenhum dado para servidor.</p>
+
+    <div class="calc-card" id="form-rescisao">
+      <div class="field-grid">
+
+        <div class="field">
+          <label for="salario">Salário bruto mensal
+            <span class="hint">Valor fixo, sem horas extras ou comissões variáveis</span>
+          </label>
+          <input type="number" id="salario" name="salario" min="0" step="0.01" placeholder="Ex: 2500.00">
+        </div>
+
+        <div class="field">
+          <label for="tipo">Tipo de rescisão</label>
+          <select id="tipo" name="tipo">
+            <option value="sem_justa_causa">Demissão sem justa causa</option>
+            <option value="pedido_demissao">Pedido de demissão</option>
+            <option value="acordo">Rescisão por acordo (Art. 484-A)</option>
+            <option value="justa_causa">Demissão por justa causa</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="admissao">Data de admissão</label>
+          <input type="date" id="admissao" name="admissao">
+        </div>
+
+        <div class="field">
+          <label for="demissao">Data de saída (último dia trabalhado)</label>
+          <input type="date" id="demissao" name="demissao">
+        </div>
+
+        <div class="field">
+          <label for="fgts">Saldo do FGTS depositado
+            <span class="hint">Opcional — consulte no app FGTS. Necessário para calcular a multa</span>
+          </label>
+          <input type="number" id="fgts" name="fgts" min="0" step="0.01" placeholder="Ex: 4800.00">
+        </div>
+
+        <div class="field" style="justify-content:center;">
+          <div class="checkbox-row">
+            <input type="checkbox" id="ferias-vencidas" name="ferias-vencidas">
+            <label for="ferias-vencidas" style="font-weight:500;">Tenho um período de férias vencidas (não tiradas)</label>
+          </div>
+        </div>
+
+      </div>
+
+      <p id="erro-msg" role="alert" style="display:none;color:#A6332B;font-size:13.5px;font-weight:600;margin:16px 0 0;"></p>
+
+      <button type="button" class="btn-calcular" id="btn-calcular">Calcular minha rescisão</button>
+    </div>
+
+    <!-- Recibo de resultado -->
+    <div class="recibo" id="recibo" aria-live="polite">
+      <div class="stamp" id="stamp">Calculado<br>agora</div>
+      <h2>Resumo estimado da rescisão</h2>
+      <div id="linhas-resultado"><!-- preenchido via JS --></div>
+      <div class="linha-total">
+        <span class="label">Total estimado a receber</span>
+        <span class="valor" id="valor-total">R$ 0,00</span>
+      </div>
+      <p class="disclaimer-recibo" id="disclaimer-topo">
+        Valores brutos, sem desconto de INSS/IRRF e sem considerar convenção coletiva da categoria. Esta é uma estimativa informativa — não substitui o cálculo oficial feito pela empresa ou por um contador/advogado trabalhista.
+      </p>
+    </div>
+  </section>
+
+  <div class="ad-slot">[ Espaço de anúncio — AdSense in-article, abaixo da calculadora ]</div>
+
+  <section class="content">
+    <h2>Como funciona o cálculo da rescisão</h2>
+    <p>A rescisão trabalhista é composta por várias verbas diferentes, que variam de acordo com o motivo do encerramento do contrato. Veja o que entra na conta:</p>
+
+    <h3>Saldo de salário</h3>
+    <p class="muted">Valor proporcional aos dias efetivamente trabalhados no mês da saída, calculado sobre o salário informado.</p>
+
+    <h3>Aviso prévio indenizado</h3>
+    <p class="muted">Quando o empregador dispensa o trabalhador sem justa causa e não exige o cumprimento do aviso, paga 30 dias + 3 dias por ano completo de empresa, limitado a 90 dias.</p>
+
+    <h3>13º salário proporcional</h3>
+    <p class="muted">Proporcional aos meses trabalhados no ano da saída. Considera-se mês completo a fração igual ou superior a 15 dias.</p>
+
+    <h3>Férias proporcionais e vencidas</h3>
+    <p class="muted">Proporcionais ao período desde o último aniversário de admissão, sempre acrescidas de 1/3 constitucional. Férias vencidas e não usufruídas são pagas em dobro do valor integral + 1/3.</p>
+
+    <h3>Multa de 40% do FGTS</h3>
+    <p class="muted">Aplicável apenas na demissão sem justa causa (40%) ou rescisão por acordo (20%), calculada sobre todo o saldo já depositado durante o contrato.</p>
+
+    <h2>Tipos de rescisão e o que cada um paga</h2>
+    <div class="tipos-grid">
+      <div class="tipo-card">
+        <h3>Sem justa causa</h3>
+        <p>Recebe todas as verbas: saldo de salário, aviso prévio, 13º e férias proporcionais, férias vencidas e multa de 40% do FGTS. Tem direito ao seguro-desemprego.</p>
+      </div>
+      <div class="tipo-card">
+        <h3>Pedido de demissão</h3>
+        <p>Recebe saldo de salário, 13º e férias proporcionais, férias vencidas. Não recebe aviso prévio indenizado nem multa do FGTS. Sem seguro-desemprego.</p>
+      </div>
+      <div class="tipo-card">
+        <h3>Acordo (Art. 484-A)</h3>
+        <p>Recebe metade do aviso prévio, multa de 20% do FGTS e pode sacar até 80% do saldo do fundo. Sem direito ao seguro-desemprego.</p>
+      </div>
+      <div class="tipo-card">
+        <h3>Justa causa</h3>
+        <p>Recebe apenas saldo de salário e férias vencidas, se houver. Perde 13º proporcional, férias proporcionais, aviso prévio e multa do FGTS.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="ad-slot">[ Espaço de anúncio — AdSense in-article, antes do FAQ ]</div>
+
+  <section class="content">
+    <h2>Perguntas frequentes sobre rescisão trabalhista</h2>
+
+    <details class="faq-item">
+      <summary>Quanto tempo a empresa tem para pagar a rescisão?</summary>
+      <p>A CLT estabelece prazo de até 10 dias corridos a partir do término do contrato para o pagamento das verbas rescisórias, independentemente do tipo de rescisão.</p>
+    </details>
+
+    <details class="faq-item">
+      <summary>Quem pede demissão tem direito a algum valor de rescisão?</summary>
+      <p>Sim. Recebe saldo de salário, férias vencidas e proporcionais com 1/3, e 13º salário proporcional. Não recebe aviso prévio indenizado nem a multa de 40% do FGTS, e normalmente não pode sacar o saldo do fundo.</p>
+    </details>
+
+    <details class="faq-item">
+      <summary>Como funciona a multa de 40% do FGTS?</summary>
+      <p>Na demissão sem justa causa, o empregador paga multa de 40% sobre todo o saldo já depositado do FGTS durante o contrato. Na rescisão por acordo, essa multa cai para 20%.</p>
+    </details>
+
+    <details class="faq-item">
+      <summary>O que é rescisão por acordo (comum acordo)?</summary>
+      <p>Modalidade prevista no artigo 484-A da CLT, usada quando empregado e empregador concordam em encerrar o contrato. O trabalhador recebe metade do aviso prévio indenizado, multa de 20% do FGTS e pode sacar até 80% do saldo do fundo, mas não tem direito ao seguro-desemprego.</p>
+    </details>
+
+    <details class="faq-item">
+      <summary>Tenho direito a seguro-desemprego depois da rescisão?</summary>
+      <p>Em geral, sim, na demissão sem justa causa, desde que cumpridos os requisitos de tempo de trabalho exigidos pelo Ministério do Trabalho. Em pedido de demissão, justa causa e acordo não há direito ao benefício.</p>
+    </details>
+
+    <details class="faq-item">
+      <summary>Por que o resultado não mostra os descontos de INSS e IRRF?</summary>
+      <p>A calculadora mostra valores brutos das verbas rescisórias para dar uma estimativa rápida. Os descontos de INSS e Imposto de Renda variam conforme a faixa salarial e devem ser conferidos no recibo oficial fornecido pela empresa ou por um contador.</p>
+    </details>
+
+    <details class="faq-item">
+      <summary>O resultado desta calculadora tem valor legal?</summary>
+      <p>Não. É uma estimativa para fins informativos. Convenções coletivas, adicionais salariais e particularidades do contrato podem alterar os valores reais. Consulte um contador ou advogado trabalhista para o cálculo oficial.</p>
+    </details>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <p>Esta ferramenta é gratuita e oferece apenas uma estimativa informativa. Não constitui aconselhamento jurídico ou contábil. © 2026 FerramentasCLT.</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+
+  var form = document.getElementById('form-rescisao');
+  var btnCalcular = document.getElementById('btn-calcular');
+  var erroMsg = document.getElementById('erro-msg');
+  var recibo = document.getElementById('recibo');
+  var linhasEl = document.getElementById('linhas-resultado');
+  var totalEl = document.getElementById('valor-total');
+  var stampEl = document.getElementById('stamp');
+
+  function mostrarErro(texto){
+    erroMsg.textContent = texto;
+    erroMsg.style.display = 'block';
+  }
+
+  function limparErro(){
+    erroMsg.style.display = 'none';
+    erroMsg.textContent = '';
+  }
+
+  function formatarBRL(valor){
+    return valor.toLocaleString('pt-BR', {style:'currency', currency:'BRL'});
+  }
+
+  // Conta meses "completos" entre duas datas, aplicando a regra
+  // de que fração >= 15 dias conta como mês inteiro.
+  function mesesTrabalhados(inicio, fim){
+    var anos = fim.getFullYear() - inicio.getFullYear();
+    var meses = anos * 12 + (fim.getMonth() - inicio.getMonth());
+    var dias = fim.getDate() - inicio.getDate();
+    if (dias < 0){
+      meses -= 1;
+      dias += 30; // aproximação de mês comercial de 30 dias
+    }
+    if (dias >= 15) meses += 1;
+    return Math.max(0, meses);
+  }
+
+  // Retorna a data do último "aniversário" de admissão antes (ou igual) à data fim
+  function ultimoAniversario(admissao, fim){
+    var ano = fim.getFullYear();
+    var aniversario = new Date(ano, admissao.getMonth(), admissao.getDate());
+    if (aniversario > fim){
+      aniversario = new Date(ano - 1, admissao.getMonth(), admissao.getDate());
+    }
+    if (aniversario < admissao) aniversario = new Date(admissao.getTime());
+    return aniversario;
+  }
+
+  function calcular(dados){
+    var salario = dados.salario;
+    var admissao = dados.admissao;
+    var demissao = dados.demissao;
+    var tipo = dados.tipo;
+    var feriasVencidas = dados.feriasVencidas;
+    var fgts = dados.fgts || 0;
+
+    var itens = [];
+    var total = 0;
+
+    function add(label, valor, nota){
+      itens.push({label: label, valor: valor, nota: nota || ''});
+      total += valor;
+    }
+
+    // 1. Saldo de salário (dias trabalhados no mês da saída)
+    var diaSaida = demissao.getDate();
+    var saldoSalario = (diaSaida / 30) * salario;
+    add('Saldo de salário', saldoSalario, diaSaida + ' dia(s) trabalhado(s) no mês da saída');
+
+    // 2. Férias vencidas (se houver, 1 período completo + 1/3)
+    if (feriasVencidas){
+      var feriasVencidasValor = salario + (salario / 3);
+      add('Férias vencidas + 1/3', feriasVencidasValor, 'Período vencido não usufruído');
+    }
+
+    // Regras por tipo de rescisão
+    if (tipo === 'justa_causa'){
+      // Só saldo de salário e férias vencidas — sem proporcionais, sem aviso, sem multa.
+    } else {
+      // 3. Férias proporcionais + 1/3
+      var inicioFerias = ultimoAniversario(admissao, demissao);
+      var mesesFerias = Math.min(12, mesesTrabalhados(inicioFerias, demissao));
+      var feriasProp = (mesesFerias / 12) * salario;
+      var tercoFerias = feriasProp / 3;
+      add('Férias proporcionais (' + mesesFerias + '/12) + 1/3', feriasProp + tercoFerias,
+          mesesFerias + ' mês(es) desde o último aniversário de admissão');
+
+      // 4. 13º salário proporcional
+      var inicioAno = new Date(demissao.getFullYear(), 0, 1);
+      var inicio13 = admissao > inicioAno ? admissao : inicioAno;
+      var meses13 = Math.min(12, mesesTrabalhados(inicio13, demissao));
+      var decimoProp = (meses13 / 12) * salario;
+      add('13º salário proporcional (' + meses13 + '/12)', decimoProp,
+          meses13 + ' mês(es) trabalhado(s) no ano de saída');
+
+      // 5. Aviso prévio indenizado (sem_justa_causa: 100% / acordo: 50%)
+      if (tipo === 'sem_justa_causa' || tipo === 'acordo'){
+        var totalMesesEmpresa = (demissao.getFullYear() - admissao.getFullYear()) * 12 +
+                                 (demissao.getMonth() - admissao.getMonth());
+        if (demissao.getDate() < admissao.getDate()) totalMesesEmpresa -= 1;
+        var anosCompletos = Math.max(0, Math.floor(totalMesesEmpresa / 12));
+        var diasAviso = Math.min(30 + anosCompletos * 3, 90);
+        var avisoValor = (diasAviso / 30) * salario;
+        if (tipo === 'acordo') avisoValor = avisoValor / 2;
+
+        add('Aviso prévio indenizado' + (tipo === 'acordo' ? ' (50%)' : ''), avisoValor,
+            diasAviso + ' dia(s) — ' + anosCompletos + ' ano(s) completo(s) de empresa');
+      }
+
+      // 6. Multa do FGTS
+      if (fgts > 0){
+        if (tipo === 'sem_justa_causa'){
+          add('Multa de 40% do FGTS', fgts * 0.40, 'Sobre o saldo informado de ' + formatarBRL(fgts));
+        } else if (tipo === 'acordo'){
+          add('Multa de 20% do FGTS', fgts * 0.20, 'Sobre o saldo informado de ' + formatarBRL(fgts) + ' (acordo Art. 484-A)');
+        }
+      }
+    }
+
+    return {itens: itens, total: total};
+  }
+
+  function renderizar(resultado){
+    linhasEl.innerHTML = '';
+    resultado.itens.forEach(function(item){
+      var div = document.createElement('div');
+      div.className = 'linha-item';
+      div.innerHTML =
+        '<span class="label">' + item.label +
+          (item.nota ? '<span class="nota">' + item.nota + '</span>' : '') +
+        '</span>' +
+        '<span class="valor">' + formatarBRL(item.valor) + '</span>';
+      linhasEl.appendChild(div);
+    });
+    totalEl.textContent = formatarBRL(resultado.total);
+
+    recibo.classList.add('visible');
+    stampEl.classList.remove('visible');
+    // pequeno delay para reiniciar a animação do selo (mais compatível que requestAnimationFrame em alguns contextos)
+    setTimeout(function(){ stampEl.classList.add('visible'); }, 10);
+
+    if (typeof recibo.scrollIntoView === 'function'){
+      recibo.scrollIntoView({behavior: 'smooth', block: 'nearest'});
+    }
+  }
+
+  btnCalcular.addEventListener('click', function(){
+    limparErro();
+
+    try {
+      var salario = parseFloat(document.getElementById('salario').value);
+      var admissaoStr = document.getElementById('admissao').value;
+      var demissaoStr = document.getElementById('demissao').value;
+      var tipo = document.getElementById('tipo').value;
+      var fgts = parseFloat(document.getElementById('fgts').value) || 0;
+      var feriasVencidas = document.getElementById('ferias-vencidas').checked;
+
+      if (!salario || isNaN(salario) || salario <= 0){
+        mostrarErro('Informe um salário válido para calcular.');
+        return;
+      }
+      if (!admissaoStr || !demissaoStr){
+        mostrarErro('Preencha as duas datas (admissão e saída) para calcular.');
+        return;
+      }
+
+      var admissao = new Date(admissaoStr + 'T00:00:00');
+      var demissao = new Date(demissaoStr + 'T00:00:00');
+
+      if (isNaN(admissao.getTime()) || isNaN(demissao.getTime())){
+        mostrarErro('Datas inválidas. Verifique os campos de admissão e saída.');
+        return;
+      }
+
+      if (demissao <= admissao){
+        mostrarErro('A data de saída precisa ser depois da data de admissão.');
+        return;
+      }
+
+      var resultado = calcular({
+        salario: salario,
+        admissao: admissao,
+        demissao: demissao,
+        tipo: tipo,
+        feriasVencidas: feriasVencidas,
+        fgts: fgts
+      });
+
+      renderizar(resultado);
+    } catch (erro){
+      console.error('Erro ao calcular rescisão:', erro);
+      mostrarErro('Não foi possível calcular. Verifique os dados preenchidos e tente novamente.');
+    }
+  });
+})();
+</script>
+
+</body>
+</html>
